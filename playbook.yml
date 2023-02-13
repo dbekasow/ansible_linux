@@ -5,6 +5,50 @@
   pre_tasks:
     - name: Update cache of package manager
       become: true
-      package:
+      ansible.builtin.package:
         update_cache: true
         upgrade: true
+
+  roles:
+    - alacritty
+    - atuin
+    - autotiling
+    - bacon
+    - base-devel
+    - bash-completion
+    - bat
+    - calibre
+    - clang
+    - cmake
+    - difftastic
+    - dmenu
+    - docker
+    - dotnet
+    - exa
+    - feh
+    - firefox
+    - git
+    - git-delta
+    - git-lfs
+    - gitui
+    - helix
+    - i3-wm
+    - i3-blocks
+    - i3-status
+    - just
+    - language-server
+    - llvm
+    - nvidia-inst
+    - pip
+    - ripgrep
+    - rofi
+    - rust
+    - navi
+    - sd
+    - skim
+    - starship
+    - tokei
+    - xplr
+    - zathura
+    - zellij
+    - zoxide
