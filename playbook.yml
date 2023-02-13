@@ -1,7 +1,10 @@
 ---
 - name: Deploy dotfiles
   hosts: local
-  tasks:
-    - name: Print the os version
-      ansible.builtin.debug:
-        msg: "{{ ansible_distribution }}"
+
+  pre_tasks:
+    - name: Update cache of package manager
+      become: true
+      package:
+        update_cache: true
+        upgrade: true
