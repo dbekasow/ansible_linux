@@ -1,0 +1,7 @@
+---
+- name: Deploy dotfiles
+  hosts: local
+  tasks:
+    - name: Print the os version
+      ansible.builtin.debug:
+        msg: "{{ ansible_distribution }}"
