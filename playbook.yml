@@ -12,6 +12,7 @@
   roles:
     - alacritty
     - git
+    - gitui
 
   # roles:
   #   - alacritty
@@ -31,9 +32,6 @@
   #   - exa
   #   - feh
   #   - firefox
-  #   - git
-  #   - git-delta
-  #   - git-lfs
   #   - gitui
   #   - helix
   #   - i3-wm
