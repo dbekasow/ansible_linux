@@ -10,6 +10,9 @@
       ansible.builtin.file:
         path: "{{ dir }}"
         state: directory
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        mode: 0755
     - name: Linkt alacritty config file
       ansible.builtin.file:
         src: "{{ dotfiles_home }}/roles/alacritty/files/alacritty.conf"
