@@ -1,0 +1,5 @@
+---
+- name: Install git-delta
+  ansible.builtin.package:
+    name: git-delta
+    state: present

@@ -1,0 +1,18 @@
+---
+- name: Install git
+  ansible.builtin.import_tasks: git.yml
+
+- name: Install git-lfs
+  ansible.builtin.import_tasks: git-lfs.yml
+
+- name: Install git-delta
+  ansible.builtin.import_tasks: git-delta.yml
+
+- name: Install difftastic
+  ansible.builtin.import_tasks: difftastic.yml
+
+- name: Link gitconfig file
+  ansible.builtin.file:
+    src: "{{ dotfiles_home }}/roles/git/files/.gitconfig"
+    dest: ~/.gitconfig
+    state: link

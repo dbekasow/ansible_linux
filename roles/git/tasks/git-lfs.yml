@@ -1,0 +1,5 @@
+---
+- name: Install git-lfs
+  ansible.builtin.package:
+    name: git-lfs
+    state: present

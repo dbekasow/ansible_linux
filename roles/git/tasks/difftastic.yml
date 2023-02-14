@@ -1,0 +1,5 @@
+---
+- name: Install difftastic
+  ansible.builtin.package:
+    name: difftastic
+    state: present
