@@ -11,8 +11,8 @@
 - name: Install difftastic
   ansible.builtin.import_tasks: difftastic.yml
 
-- name: Link gitconfig file
+- name: Link git config file
   ansible.builtin.file:
-    src: "{{ dotfiles_home }}/roles/git/files/.gitconfig"
+    src: "{{ dotfiles_home }}/roles/git/files/git.conf"
     dest: ~/.gitconfig
     state: link

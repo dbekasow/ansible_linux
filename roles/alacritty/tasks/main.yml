@@ -1,0 +1,17 @@
+---
+- name: Install alacritty
+  ansible.builtin.import_tasks: alacritty.yml
+
+- name: Link alacritty config file
+  vars:
+    dir: "~/.config/alacritty"
+  block:
+    - name: Create alacritty config dir
+      ansible.builtin.file:
+        path: "{{ dir }}"
+        state: directory
+    - name: Linkt alacritty config file
+      ansible.builtin.file:
+        src: "{{ dotfiles_home }}/roles/alacritty/files/alacritty.conf"
+        dest: "{{ dir }}/alacritty.yml"
+        state: link
