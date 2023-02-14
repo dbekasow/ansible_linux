@@ -1,0 +1,5 @@
+---
+- name: Install helix
+  ansible.builtin.package:
+    name: helix
+    state: present
