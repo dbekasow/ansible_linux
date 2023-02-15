@@ -1,0 +1,19 @@
+---
+- name: Install fnm
+  become: true
+  ansible.builtin.package:
+    name: fnm
+    state: present
+
+- name: Setup fnm
+  ansible.builtin.blockinfile:
+    path: ~/.bashrc
+    marker: "### {mark} setup fnm ###"
+    insertafter: EOF
+    block: |
+      eval "$(fnm env --use-on-cd)"
+
+- name: Install npm with fnm
+  ansible.builtin.command: fnm install --lts
+  register: result
+  changed_when: result != 0

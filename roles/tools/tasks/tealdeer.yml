@@ -1,0 +1,13 @@
+---
+- name: Remove tldr
+  become: true
+  ansible.builtin.package:
+    name: tldr
+    state: absent
+  when: tldr in ansible_facts.packages
+
+- name: Install tealdeer
+  become: true
+  ansible.builtin.package:
+    name: tealdeer
+    state: present

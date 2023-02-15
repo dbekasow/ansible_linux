@@ -1,0 +1,6 @@
+---
+- name: Install ouch
+  become: true
+  ansible.builtin.package:
+    name: ouch
+    state: present

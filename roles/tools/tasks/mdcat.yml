@@ -1,0 +1,6 @@
+---
+- name: Install mdcat
+  become: true
+  ansible.builtin.package:
+    name: mdcat
+    state: present

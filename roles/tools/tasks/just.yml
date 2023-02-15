@@ -1,0 +1,6 @@
+---
+- name: Install just
+  become: true
+  ansible.builtin.package:
+    name: just
+    state: present

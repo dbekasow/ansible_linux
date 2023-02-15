@@ -1,0 +1,6 @@
+---
+- name: Install skim
+  become: true
+  ansible.builtin.package:
+    name: skim
+    state: present

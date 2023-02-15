@@ -1,0 +1,25 @@
+- name: Install commandline tools
+  ansible.builtin.include_tasks: "{{ item }}"
+  loop:
+    - atuin.yml
+    - bat.yml
+    - bottom.yml
+    - exa.yml
+    - fd.yml
+    - fnm.yml
+    - git.yml
+    - gitui.yml
+    - helix.yml
+    - hyperfine.yml
+    - just.yml
+    - mdcat.yml
+    - ouch.yml
+    - ripgrep.yml
+    - sd.yml
+    - skim.yml
+    - tealdeer.yml
+    - tokei.yml
+    - watchexec.yml
+    - xh.yml
+    - xplr.yml
+    - zoxide.yml

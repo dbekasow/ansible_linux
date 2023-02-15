@@ -1,0 +1,6 @@
+---
+- name: Install tokei
+  become: true
+  ansible.builtin.package:
+    name: tokei
+    state: present

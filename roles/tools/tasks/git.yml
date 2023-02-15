@@ -1,0 +1,16 @@
+---
+- name: Install git
+  become: true
+  ansible.builtin.package:
+    name:
+      - git
+      - git-lfs
+      - git-delta
+      - difftastic
+    state: present
+
+- name: Copy gitconfig
+  ansible.builtin.copy:
+    src: git/config
+    dest: ~/.gitconfig
+    mode: "0755"

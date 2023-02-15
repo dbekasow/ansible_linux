@@ -1,0 +1,23 @@
+---
+- name: Install atuin
+  become: true
+  ansible.builtin.package:
+    name: atuin
+    state: present
+
+- name: Copy preexec bash file
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh
+    dest: ~/.bash_preexec.sh
+    mode: "0600"
+
+- name: Setup atuin
+  ansible.builtin.blockinfile:
+    path: ~/.bashrc
+    marker: "### {mark} setup atuin ###"
+    block: |
+      export ATUIN_NOBIND="true"
+      eval "$(atuin init bash)"
+
+      # bind to ctrl-r, add any other bindings you want here too
+      bind -x '"\C-r": __atuin_history'

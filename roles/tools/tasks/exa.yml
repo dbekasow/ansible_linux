@@ -1,0 +1,6 @@
+---
+- name: Install exa
+  become: true
+  ansible.builtin.package:
+    name: exa
+    state: present

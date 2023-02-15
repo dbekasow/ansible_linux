@@ -1,0 +1,6 @@
+---
+- name: Install watchexec
+  become: true
+  ansible.builtin.package:
+    name: watchexec
+    state: present

@@ -1,0 +1,6 @@
+---
+- name: Install bottom
+  become: true
+  ansible.builtin.package:
+    name: bottom
+    state: present

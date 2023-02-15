@@ -1,0 +1,6 @@
+---
+- name: Install hyperfine
+  become: true
+  ansible.builtin.package:
+    name: hyperfine
+    state: present

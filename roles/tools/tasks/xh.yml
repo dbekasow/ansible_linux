@@ -1,0 +1,6 @@
+---
+- name: Install xh
+  become: true
+  ansible.builtin.package:
+    name: xh
+    state: present

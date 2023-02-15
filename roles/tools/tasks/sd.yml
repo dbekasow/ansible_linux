@@ -1,0 +1,6 @@
+---
+- name: Install sd
+  become: true
+  ansible.builtin.package:
+    name: sd
+    state: present

@@ -1,0 +1,6 @@
+---
+- name: Install xplr
+  become: true
+  ansible.builtin.package:
+    name: xplr
+    state: present

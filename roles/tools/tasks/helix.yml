@@ -1,0 +1,12 @@
+---
+- name: Install helix editor
+  become: true
+  ansible.builtin.package:
+    name: helix
+    state: present
+
+- name: Copy helix config
+  ansible.builtin.copy:
+    src: helix/config
+    dest: .config/helix/config.toml
+    mode: "0755"
