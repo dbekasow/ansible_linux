@@ -1,0 +1,12 @@
+---
+- name: Install alacritty
+  become: true
+  ansible.builtin.package:
+    name: alacritty
+    state: present
+
+- name: Copy alacritty config
+  ansible.builtin.copy:
+    src: alacritty/config
+    dest: .config/alacritty/alacritty.toml
+    mode: "0755"

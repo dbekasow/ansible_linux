@@ -1,3 +1,0 @@
----
-- name: Install gitui
-  ansible.builtin.import_tasks: gitui.yml

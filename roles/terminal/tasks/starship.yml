@@ -1,0 +1,12 @@
+---
+- name: Install starship
+  become: true
+  ansible.builtin.package:
+    name: starship
+    state: present
+
+- name: Copy starship config
+  ansible.builtin.copy:
+    src: starship/config
+    dest: .config/starship.toml
+    mode: "0755"

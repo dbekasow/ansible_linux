@@ -9,49 +9,13 @@
         update_cache: true
         upgrade: true
 
-  roles:
-    - alacritty
-    - git
-    - gitui
-    - helix
+    - name: Gather package facts
+      become: true
+      ansible.builtin.package_facts:
+        manager: auto
 
-  # roles:
-  #   - alacritty
-  #   - atuin
-  #   - autotiling
-  #   - bacon
-  #   - base-devel
-  #   - bash-completion
-  #   - bat
-  #   - calibre
-  #   - clang
-  #   - cmake
-  #   - difftastic
-  #   - dmenu
-  #   - docker
-  #   - dotnet
-  #   - exa
-  #   - feh
-  #   - firefox
-  #   - gitui
-  #   - helix
-  #   - i3-wm
-  #   - i3-blocks
-  #   - i3-status
-  #   - just
-  #   - language-server
-  #   - llvm
-  #   - nvidia-inst
-  #   - pip
-  #   - ripgrep
-  #   - rofi
-  #   - rust
-  #   - navi
-  #   - sd
-  #   - skim
-  #   - starship
-  #   - tokei
-  #   - xplr
-  #   - zathura
-  #   - zellij
-  #   - zoxide
+  roles:
+    - desktop
+    - development
+    - terminal
+    - tools

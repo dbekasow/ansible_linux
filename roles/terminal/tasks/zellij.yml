@@ -1,0 +1,12 @@
+---
+- name: Install zellij
+  become: true
+  ansible.builtin.package:
+    name: zellij
+    state: present
+
+- name: Copy zellij config
+  ansible.builtin.copy:
+    src: zellij/config
+    dest: .config/zellij/config.kdl
+    mode: "0755"

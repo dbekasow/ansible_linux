@@ -1,0 +1,9 @@
+---
+- name: Install terminal
+  ansible.builtin.include_tasks: "{{ item }}"
+  loop:
+    - alacritty.yml
+    - helix.yml
+    - gitui.yml
+    - starship.yml
+    - zellij.yml

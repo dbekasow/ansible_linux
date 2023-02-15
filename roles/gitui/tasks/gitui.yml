@@ -1,5 +1,0 @@
----
-- name: Install gitui
-  ansible.builtin.package:
-    name: gitui
-    state: present
