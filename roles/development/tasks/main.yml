@@ -1,0 +1,7 @@
+---
+- name: Install development tools
+  ansible.builtin.include_tasks: "{{ item }}"
+  loop:
+    - docker.yml
+    - dotnet.yml
+    - rust.yml
